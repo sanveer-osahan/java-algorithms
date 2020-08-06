@@ -53,20 +53,20 @@ public class UniqueCharactersTest
 		
 		UniqueCharacters uniqueCharacters= new UniqueCharacters();
 		
-		long start = System.currentTimeMillis(); 
+		long start = System.nanoTime(); 
 		uniqueCharacters.findByBruteForce(randomString);
-        long end = System.currentTimeMillis(); 
-        System.out.println("Brute Force - " + (end - start) + "ms");
+        long end =System.nanoTime(); 
+        System.out.println("Brute Force - " + (end - start) + " ns");
         
-        start = System.currentTimeMillis(); 
+        start = System.nanoTime(); 
 		uniqueCharacters.findBySorting(randomString);
-        end = System.currentTimeMillis(); 
-        System.out.println("Sorting - " + (end - start) + "ms"); 
+        end = System.nanoTime(); 
+        System.out.println("Sorting - " + (end - start) + " ns"); 
         
-        start = System.currentTimeMillis(); 
+        start = System.nanoTime(); 
 		uniqueCharacters.findUsingCharacterSet(randomString);
-        end = System.currentTimeMillis(); 
-        System.out.println("Character Set - " + (end - start) + "ms"); 
+        end = System.nanoTime(); 
+        System.out.println("Character Set - " + (end - start) + " ns"); 
 		
 	}
 	
